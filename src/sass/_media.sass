@@ -1,8 +1,53 @@
-@media (max-width: 1200px) 
+@media (max-width: 1200px)
     .menu
         &_item
             padding-right: 18px
-        
         &_link
             font-size: 13px
-    
+    .promo
+        &_header
+            font-size: 50px
+
+@media (max-width: 991px)
+    .menu
+        &_item
+            padding-right: 5px
+        &_link
+            font-size: 11px
+    .subheader
+        &_logo
+            img
+                width: 100%
+        &_official
+            font-size: 11px
+        &_phone
+            font-size: 20px
+        &_btn
+            margin-top: 20px
+            height: 44px
+    .mobile
+        &_item
+            width: 224px
+    .promo
+        &_header
+            font-size: 40px
+        &_subheader
+            font-size: 30px
+            margin-top: 10px
+    .reason .reasons_container .reasons
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+    .reason .reasons_container .reasons .txt_reas
+        margin-top: 20px
+
+@media ( max-width: 767px)
+    .menu
+        position: fixed
+        top: 0
+        right: 0
+        width: 50%
+        height: 100vh
+        padding: 20px 15px
+        flex-direction: column
+        background-color: rgba(0, 0, 0, .8)

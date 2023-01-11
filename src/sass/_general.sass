@@ -1,5 +1,6 @@
 header
   position: relative
+  height: 50px
 
 nav
   height: 50px
@@ -22,6 +23,8 @@ nav
   &_item
     border-right: 2px dotted #000
     padding-right: 28px
+    &:last-child
+      border-right: none
 
 .subheader
   position: absolute
@@ -31,25 +34,25 @@ nav
   z-index: 4
   position: absolute
   top: 50px
-  .subheader_logo
+  &_logo
     max-width: 100%
     display: block
     margin-top: 16px
-  .subheader_official
+  &_official
     font-style: normal
     font-weight: 100
     font-size: 13px
     color: #FFFFFF
     opacity: 0.5
     margin-top: 6px
-  .subheader_call
+  &_call
     margin-top: 18px
     font-style: normal
     font-weight: 300
     font-size: 12px
     color: #FFFFFF
     text-align: right
-  .subheader_phone
+  &_phone
     display: block
     margin-top: 6px
     font-style: normal
@@ -59,7 +62,7 @@ nav
     text-align: right
     line-height: 22px
     text-decoration: none
-  .subheader_btn
+  &_btn
     margin-top: 18px
     width: 172px
     height: 46px
@@ -80,14 +83,14 @@ nav
   background: url(../img/uber_bg.png) center (center / cover) no-repeat
   text-align: center
   padding: 150px 0 150px
-  .promo_header
+  &_header
     margin: 0
     font-style: normal
     font-weight: 900
     font-size: 60px
     text-transform: uppercase
     color: #FFFFFF
-  .promo_subheader
+  &_subheader
     font-style: normal
     font-weight: 700
     font-size: 36px
@@ -95,7 +98,7 @@ nav
     text-transform: uppercase
     color: #FFFFFF
     margin: 0
-  .promo_desc
+  &_desc
     margin: 0
     margin-top: 16px
     font-style: normal
@@ -103,7 +106,7 @@ nav
     font-size: 18px
     line-height: 24px
     color: #FFFFFF
-  .promo_btn
+  &_btn
     margin-top: 116px
     width: 259px
     height: 63px
@@ -161,14 +164,14 @@ nav
 .reason .reasons_container .reasons
   display: flex
   justify-content: center
-  align-items: center
+  align-items: flex-start
+  margin-top: 16px
   img
     height: 116px
     margin-right: 25px
   .txt_reas
-    width: 371px
+    width: 300px
     .title_reas
-      margin-top: 16px
       font-style: normal
       font-weight: 400
       font-size: 17px
