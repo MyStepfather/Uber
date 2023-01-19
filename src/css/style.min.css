@@ -37,6 +37,9 @@
 * .menu_item:last-child {
   border-right: none;
 }
+* .hamburger {
+  display: none;
+}
 * .subheader {
   position: absolute;
   width: 100%;
@@ -100,7 +103,7 @@
   background-color: #1EACC7;
 }
 * .promo {
-  min-height: 800px;
+  height: 100%;
   background: url(../img/uber_bg.png) center center/cover no-repeat;
   text-align: center;
   padding: 150px 0 150px;
@@ -570,6 +573,9 @@
   text-decoration: none;
   color: #1FBAD6;
 }
+* .xs-visible {
+  display: none;
+}
 @media (max-width: 1200px) {
   * .menu_item {
     padding-right: 18px;
@@ -623,6 +629,9 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  * .reason .reasons_container .reasons .ico_reas {
+    margin-right: 0;
+  }
   * .reason .reasons_container .reasons .txt_reas {
     margin-top: 20px;
   }
@@ -631,7 +640,7 @@
   * .menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: -100%;
     width: 50%;
     height: 100vh;
     padding: 20px 15px;
@@ -639,6 +648,161 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+  }
+  * .menu_active {
+    left: 0;
+  }
+  * .menu_item {
+    padding-right: 0;
+    border: none;
+    margin: 10px;
+  }
+  * .menu_link {
+    font-size: 20px;
+  }
+  * .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 26px;
+  }
+  * .hamburger span {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2px;
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+  }
+  * .hamburger_active span {
+    margin-bottom: -2px;
+  }
+  * .hamburger_active span:nth-child(1) {
+    -webkit-transform: translateY(3px) rotate(-45deg);
+            transform: translateY(3px) rotate(-45deg);
+  }
+  * .hamburger_active span:nth-child(2) {
+    display: none;
+  }
+  * .hamburger_active span:nth-child(3) {
+    -webkit-transform: translateY(3px) rotate(45deg);
+            transform: translateY(3px) rotate(45deg);
+  }
+  * .xs-hidden {
+    display: none;
+  }
+  * .xs-visible {
+    display: block;
+  }
+  * .subheader_phone {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  * .subheader_btn {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  * .promo_header {
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 575px) {
+  * nav {
+    height: 30px;
+  }
+  * header {
+    height: 30px;
+  }
+  * .subheader {
+    top: 30px;
+    height: 60px;
+  }
+  * .subheader_official {
+    display: none;
+  }
+  * .subheader_logo {
+    margin-top: 16px;
+  }
+  * .subheader_btn {
+    width: 110px;
+    height: 26px;
+    font-size: 10px;
+    margin-top: 0px;
+  }
+  * .subheader_phone {
+    font-size: 12px;
+  }
+  * .promo {
+    min-height: 400px;
+    padding: 111px 0 35px 0;
+  }
+  * .promo_desc {
+    display: none;
+  }
+  * .promo_header {
+    font-size: 30px;
+    padding: 0 24px;
+    line-height: 35px;
+  }
+  * .promo_subheader {
+    font-size: 20px;
+    margin-top: 33px;
+    padding: 0 10px;
+    line-height: 29px;
+  }
+  * .promo_btn {
+    width: 210px;
+    height: 50px;
+    margin-top: 72px;
+  }
+  * .menu {
+    width: 85%;
+  }
+  * .reason {
+    padding: 0 0 36px;
+  }
+  * .reasons_container {
+    margin-top: 10px;
+  }
+  * .title {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 15px;
+  }
+  * .reason .reasons_container .reasons .ico_reas {
+    width: 100px;
+    height: 100px;
+  }
+  * .reason .reasons_container .reasons .txt_reas {
+    margin-top: 25px;
+  }
+  * .reason .reasons_container .reasons .txt_reas .title_reas {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.min.css.map */
